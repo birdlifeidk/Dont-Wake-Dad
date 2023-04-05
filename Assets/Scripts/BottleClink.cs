@@ -12,12 +12,12 @@ public class BottleClink : MonoBehaviour
     public GameObject beerBottle;
     public AudioSource clink; 
 
-    private void Start()
+    public void Start()
     {
         johny = GetComponent<Rigidbody>(); 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         foreach (ContactPoint contact in collision.contacts)
         {
