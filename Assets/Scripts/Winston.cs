@@ -7,7 +7,8 @@ public class Winston : MonoBehaviour
 {
     public Rigidbody winston;
     public BottleClink bottleSounds;
-    public Animator _animator; 
+    public Animator _animator;
+    public AudioSource sentence1; 
 
     private void Start()
     {
@@ -18,16 +19,16 @@ public class Winston : MonoBehaviour
     {
         if (bottleSounds.clink.volume == 0.89)
         {
-            WinstonAwakens();
+            WinstonSpeaks(); 
         }
     }
 
-    private void WinstonAwakens()
+    private void WinstonSpeaks()
     {
         
         if (_animator != null)
         {
-         //   _animator.SetTrigger();	
+            //sentence1.Play; 
         }
     }
 }

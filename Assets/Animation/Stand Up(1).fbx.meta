@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 56ab2ddd0c587774dbed6e256c1782b6
+guid: 76971ca38709b5f4397843ca551d7b92
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -15,7 +15,7 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
-    motionNodeName: 
+    motionNodeName: <Root Transform>
     rigImportErrors: "Copied Avatar Rig Configuration mis-match. Transform hierarchy
       does not match:\n\tTransform 'CC_Base_Hip' for human bone 'Hips' not found\n"
     rigImportWarnings: 
@@ -34,7 +34,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
+      name: stand_up
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
@@ -45,8 +45,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
+      loopTime: 0
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -83,9 +83,9 @@ ModelImporter:
     weldVertices: 1
     bakeAxisConversion: 0
     preserveHierarchy: 0
-    skinWeightsMode: 1
-    maxBonesPerVertex: 25
-    minBoneWeight: 0.016
+    skinWeightsMode: 0
+    maxBonesPerVertex: 27
+    minBoneWeight: 0.019
     optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0

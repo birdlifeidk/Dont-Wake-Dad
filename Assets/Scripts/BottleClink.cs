@@ -10,7 +10,8 @@ public class BottleClink : MonoBehaviour
     //Also add the grab functions so that he can interact with the world. 
     public Rigidbody johny;
     public GameObject beerBottle;
-    public AudioSource clink; 
+    public AudioSource clink;
+    public Winston _winston; 
 
     public void Start()
     {
@@ -24,7 +25,7 @@ public class BottleClink : MonoBehaviour
             clink.Play();
         }
 
-        if (collision.relativeVelocity.magnitude > 1)
+        if (collision.relativeVelocity.magnitude > .7)
         {
             clink.volume = .89f; 
         }
