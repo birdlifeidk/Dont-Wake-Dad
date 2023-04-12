@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    public int soundCount;
+    
     public static GameManager Instance;
 
     public GameState State;
@@ -19,6 +22,14 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UpdateGameState(GameState.GameMenu);
+    }
+
+    private void Update()
+    {
+        if (soundCount > 9)
+        {
+            FindObjectOfType<MenuManager>().EndGame();
+        }
     }
 
     public void UpdateGameState(GameState newState)

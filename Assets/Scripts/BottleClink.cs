@@ -23,6 +23,7 @@ public class BottleClink : MonoBehaviour
         foreach (ContactPoint contact in collision.contacts)
         {
             clink.Play();
+            GameManager.Instance.soundCount++;
         }
 
         if (collision.relativeVelocity.magnitude > .7)

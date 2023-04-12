@@ -3,26 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private GameObject gameStartMenu, _startButton;
-    [SerializeField] private TextMeshProUGUI _stateText;
-
-    private void Awake()
+    
+    
+    public void PlayGame()
     {
-        GameManager.OnGameStateChanged += GameManagerGameStateChanged;
+        SceneManager.LoadScene("FinalGameScene");
+        Debug.Log("hi there");
     }
-
-    private void OnDestroy()
+    public void EndGame()
     {
-        GameManager.OnGameStateChanged -= GameManagerGameStateChanged;
+        SceneManager.LoadScene("YouLose");
     }
-
-    private void GameManagerGameStateChanged(GameManager.GameState obj)
-    {
-        throw new System.NotImplementedException();
-    }
+    
 
     private void Start()
     {
