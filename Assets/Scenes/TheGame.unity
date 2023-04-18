@@ -24026,9 +24026,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000010150583761}
+<<<<<<< Updated upstream
   m_LocalRotation: {x: 0.7071067, y: 0.0000017944297, z: -0.0000017503481, w: 0.7071069}
   m_LocalPosition: {x: -0.001846117, y: 0.045700043, z: -0.0675548}
   m_LocalScale: {x: 1, y: 0.9999999, z: 0.9999999}
+=======
+  m_LocalRotation: {x: 1, y: 0.0000025051027, z: 0.000000034244287, w: 0.00000017881389}
+  m_LocalPosition: {x: -0.0018460453, y: 0.06755477, z: 0.045700014}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+>>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4000009701835707}
@@ -24555,6 +24561,11 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -8471013258603102087, guid: 146fa04ebedf4d840ad65f715fdb2d0c, type: 2}
     value: {fileID: 95000012256623673}
+<<<<<<< Updated upstream
+=======
+  - key: {fileID: -5491271635582534559, guid: 146fa04ebedf4d840ad65f715fdb2d0c, type: 2}
+    value: {fileID: 95000012256623673}
+>>>>>>> Stashed changes
   m_ExposedReferences:
     m_References: []
 --- !u!137 &137000009997013887
