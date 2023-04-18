@@ -11,13 +11,18 @@ public class BottleClink : MonoBehaviour
     public Rigidbody johnny;
     public GameObject beerBottle;
     public AudioSource clink;
-    public Winston _winston; 
-
+    public Winston _winston;
+    
     public void Start()
     {
         johnny = GetComponent<Rigidbody>(); 
+        Invoke("DelaySound", 0.1f);
     }
 
+    public void DelaySound()
+    {
+        clink.enabled = true;
+    }
     public void OnCollisionEnter(Collision collision)
     {
         foreach (ContactPoint contact in collision.contacts)

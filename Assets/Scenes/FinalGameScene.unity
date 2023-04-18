@@ -3465,21 +3465,33 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4000011192809254, guid: a8fe6caaa21d33647aea787c42c2d3d5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5488358
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011192809254, guid: a8fe6caaa21d33647aea787c42c2d3d5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5488358
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011192809254, guid: a8fe6caaa21d33647aea787c42c2d3d5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5488358
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013847600686, guid: a8fe6caaa21d33647aea787c42c2d3d5, type: 3}
       propertyPath: m_RootOrder
       value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 4000013847600686, guid: a8fe6caaa21d33647aea787c42c2d3d5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.54883575
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4000013847600686, guid: a8fe6caaa21d33647aea787c42c2d3d5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.54883575
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4000013847600686, guid: a8fe6caaa21d33647aea787c42c2d3d5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.54883575
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4000013847600686, guid: a8fe6caaa21d33647aea787c42c2d3d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3487,7 +3499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013847600686, guid: a8fe6caaa21d33647aea787c42c2d3d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.425
+      value: 0.466
       objectReference: {fileID: 0}
     - target: {fileID: 4000013847600686, guid: a8fe6caaa21d33647aea787c42c2d3d5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3534,6 +3546,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1000014076931076, guid: a8fe6caaa21d33647aea787c42c2d3d5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 366603553}
+    - targetCorrespondingSourceObject: {fileID: 1000014076931076, guid: a8fe6caaa21d33647aea787c42c2d3d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 366603555}
   m_SourcePrefab: {fileID: 100100000, guid: a8fe6caaa21d33647aea787c42c2d3d5, type: 3}
 --- !u!1 &366603548 stripped
 GameObject:
@@ -3565,7 +3580,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!65 &366603552
 BoxCollider:
@@ -3586,8 +3601,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.8965713, y: 0.74810266, z: 1.0273409}
-  m_Center: {x: -0.056220647, y: -0.45438677, z: -0.013671032}
+  m_Size: {x: 0.41, y: 0.3756645, z: 0.39681107}
+  m_Center: {x: 8.625767e-12, y: -0.26716775, z: 0.004373282}
 --- !u!114 &366603553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3601,7 +3616,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chair: {fileID: 366603548}
-  squeakyChair: {fileID: 908846946}
+  squeakyChair: {fileID: 0}
+--- !u!65 &366603555
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366603548}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.41, y: 0.05, z: 0.39681107}
+  m_Center: {x: 8.625767e-12, y: -0.09, z: 0.004373282}
 --- !u!1001 &371051466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9830,7 +9866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6537192a292d947861bba7743fc54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundCount: 0
+  soundCount: -15
   State: 0
 --- !u!4 &1116813480
 Transform:
@@ -12076,9 +12112,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 20437472682476688, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: near clip plane
+      value: 0.06
+      objectReference: {fileID: 0}
     - target: {fileID: 54063890643546284, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_Mass
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503055206606986, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: distanceThreshold
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 114762042097486276, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: key
@@ -12309,7 +12353,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330652894}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 03d5aec3754a34b4db7f7725d30ae9fd, type: 3}
