@@ -8,7 +8,8 @@ public class Winston : MonoBehaviour
     public Rigidbody winston;
     public BottleClink bottleSounds;
     public Animator _animator;
-    public AudioSource sentence1; 
+    public AudioSource sentence1;
+    public GameManager _gameManager; 
 
     private void Start()
     {
