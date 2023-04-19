@@ -19,7 +19,7 @@ public class PickUpSnack : MonoBehaviour
 
     private void Start()
     {
-        pickUpWindow.SetActive(false);
+        pickUpWindow.SetActive(true);
     }
 
     void Update()
