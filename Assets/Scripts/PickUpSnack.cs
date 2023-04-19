@@ -14,16 +14,25 @@ public class PickUpSnack : MonoBehaviour
     [SerializeField] private Transform Hand; 
     
     private Rigidbody chipRigidbody;
-    private Collider chipCollider; 
+    private Collider chipCollider;
+    public GameObject pickUpWindow;
+
+    private void Start()
+    {
+        pickUpWindow.SetActive(false);
+    }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            pickUpWindow.SetActive(true);
+            
             Ray PickUpRay = new Ray(PlayerCamera.transform.position, PlayerCamera.transform.forward);
 
             if (Physics.Raycast(PickUpRay, out RaycastHit hitInfo, PickUpRange, PickUpLayer))
             {
+                pickUpWindow.SetActive(false);
                 if (chipRigidbody)
                 {
                 
@@ -45,5 +54,10 @@ public class PickUpSnack : MonoBehaviour
             chipRigidbody.rotation = Hand.rotation; 
         }
        
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        pickUpWindow.SetActive(false);
     }
 }

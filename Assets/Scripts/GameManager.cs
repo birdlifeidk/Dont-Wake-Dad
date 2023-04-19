@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         
+
         if (soundCount > 15)
         {
             FindObjectOfType<MenuManager>().EndGame();

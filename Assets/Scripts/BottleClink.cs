@@ -24,12 +24,12 @@ public class BottleClink : MonoBehaviour
         clink.enabled = true;
     }
     public void OnCollisionEnter(Collision collision)
-    {
-        foreach (ContactPoint contact in collision.contacts)
-        {
-            clink.Play();
-            GameManager.Instance.soundCount++;
-        }
+             {
+                 foreach (ContactPoint contact in collision.contacts)
+                 {
+                     clink.Play();
+                     GameManager.Instance.soundCount++;
+                 }
 
         if (collision.relativeVelocity.magnitude > .7)
         {
