@@ -14,15 +14,17 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("FinalGameScene");
         Debug.Log("hi there");
     }
+    
+    
+
     public void EndGame()
     {
         SceneManager.LoadScene("YouLose");
     }
-    
 
-    private void Start()
+    public void WinGame()
     {
-        
+        SceneManager.LoadScene("YouWin");
     }
-    
+
 }
