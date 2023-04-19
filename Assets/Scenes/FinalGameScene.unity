@@ -3599,7 +3599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chair: {fileID: 366603548}
-  squeakyChair: {fileID: 0}
+  squeakyChair: {fileID: 908846946}
 --- !u!65 &366603555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8435,15 +8435,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e0853c31cbd30fa49a370eb2956f4a2c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: edc3c5f5362410b4080da0a177455ddd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.02
+  m_Volume: 0.333
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 5
+  Priority: 16
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -10408,7 +10408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6537192a292d947861bba7743fc54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundCount: -15
+  soundCount: -82
   State: 0
 --- !u!4 &1116813480
 Transform:
