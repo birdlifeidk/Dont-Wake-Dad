@@ -27,7 +27,7 @@ public class ChairSound : MonoBehaviour
                 GameManager.Instance.soundCount++;
             }
 
-            if (collision.relativeVelocity.magnitude > .9)
+            if (collision.relativeVelocity.magnitude > 1)
             {
                 squeakyChair.volume = .6f; 
             }
