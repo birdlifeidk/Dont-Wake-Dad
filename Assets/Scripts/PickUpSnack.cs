@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
 
@@ -11,7 +14,8 @@ public class PickUpSnack : MonoBehaviour
     [SerializeField] private LayerMask PickUpLayer; 
     [SerializeField] private Camera PlayerCamera; 
     [SerializeField] private float PickUpRange;
-    [SerializeField] private Transform Hand; 
+    [SerializeField] private Transform Hand;
+    
     
     private Rigidbody chipRigidbody;
     private Collider chipCollider;
@@ -24,15 +28,15 @@ public class PickUpSnack : MonoBehaviour
 
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.E))
         {
-            pickUpWindow.SetActive(true);
-            
+           
             Ray PickUpRay = new Ray(PlayerCamera.transform.position, PlayerCamera.transform.forward);
 
             if (Physics.Raycast(PickUpRay, out RaycastHit hitInfo, PickUpRange, PickUpLayer))
             {
-                pickUpWindow.SetActive(false);
+                
                 if (chipRigidbody)
                 {
                 
@@ -53,7 +57,10 @@ public class PickUpSnack : MonoBehaviour
             chipRigidbody.position = Hand.position;
             chipRigidbody.rotation = Hand.rotation; 
         }
-       
+        
+      
+
+
     }
 
     private void OnTriggerExit(Collider other)

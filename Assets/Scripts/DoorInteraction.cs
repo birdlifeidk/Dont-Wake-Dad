@@ -1,14 +1,19 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DoorInteraction : MonoBehaviour
 {
     public int objectsCollected;
     public int objectsNeeded;
     public GameObject door;
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +25,7 @@ public class DoorInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         if (objectsCollected == objectsNeeded)
         {
             door.SetActive(false);
@@ -34,7 +40,8 @@ public class DoorInteraction : MonoBehaviour
             Debug.Log("mmm chips");
 
             // Deactivate the collectible so it cannot be collected again.
-            Col.gameObject.SetActive(false);   
+            Col.gameObject.SetActive(false);
+            
         }
         
     }
