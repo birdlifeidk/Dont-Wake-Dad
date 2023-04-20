@@ -14,7 +14,7 @@ public class DoorInteraction : MonoBehaviour
     void Start()
     {
         objectsCollected = 0;
-        objectsNeeded = 1;
+        objectsNeeded = 5;
     }
 
     // Update is called once per frame
