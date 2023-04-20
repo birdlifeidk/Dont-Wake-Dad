@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Scene = UnityEditor.SearchService.Scene;
 
 public class MenuManager : MonoBehaviour
 {
@@ -15,8 +16,10 @@ public class MenuManager : MonoBehaviour
         Debug.Log("hi there");
     }
 
-    
-    
+    public void IntroScene()
+    {
+        SceneManager.LoadScene("Introduction"); 
+    }
 
     public void EndGame()
     {
