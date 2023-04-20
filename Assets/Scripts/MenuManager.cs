@@ -26,7 +26,7 @@ public class MenuManager : MonoBehaviour
 
     public void EndGame()
     {
-        Score = 0; 
+        _pickUpSnack.Score = 0;
         SceneManager.LoadScene("YouLose");
         
       
@@ -34,6 +34,7 @@ public class MenuManager : MonoBehaviour
 
     public void WinGame()
     {
+        _pickUpSnack.Score = 0; 
         SceneManager.LoadScene("YouWin");
     }
 
