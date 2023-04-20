@@ -9,6 +9,9 @@ using Scene = UnityEditor.SearchService.Scene;
 public class MenuManager : MonoBehaviour
 {
     public float delayTime = 3f;
+    public PickUpSnack _pickUpSnack;
+    public int Score; 
+    
 
     public void PlayGame()
     {
@@ -23,12 +26,20 @@ public class MenuManager : MonoBehaviour
 
     public void EndGame()
     {
+        Score = 0; 
         SceneManager.LoadScene("YouLose");
+        
+      
     }
 
     public void WinGame()
     {
         SceneManager.LoadScene("YouWin");
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("GameMenu");
     }
 
 

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Mime;
 using Cinemachine;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
@@ -16,7 +17,9 @@ public class PickUpSnack : MonoBehaviour
     [SerializeField] private float PickUpRange;
     [SerializeField] private Transform Hand;
     
-    
+    public TextMeshProUGUI ScoreText;
+    public int Score; 
+
     private Rigidbody chipRigidbody;
     private Collider chipCollider;
     public GameObject pickUpWindow;
@@ -24,10 +27,14 @@ public class PickUpSnack : MonoBehaviour
     private void Start()
     {
         pickUpWindow.SetActive(true);
+
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        Score = PlayerPrefs.GetInt("Snacks Obtained: ", 0);
+        ScoreText.text = "Snacks Obtained: " + Score.ToString(); 
+        
 
         if (Input.GetKeyDown(KeyCode.E))
         {

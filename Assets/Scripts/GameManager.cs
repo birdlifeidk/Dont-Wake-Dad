@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public GameState State;
+
 
     public static event Action<GameState> OnGameStateChanged;
 
@@ -31,11 +33,13 @@ public class GameManager : MonoBehaviour
         if (soundCount > 15)
         {
             FindObjectOfType<MenuManager>().EndGame();
+           
         }
     }
 
     public void UpdateGameState(GameState newState)
     {
+        
         State = newState;
 
         switch (newState)

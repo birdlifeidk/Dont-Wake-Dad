@@ -11,8 +11,9 @@ public class DoorInteraction : MonoBehaviour
     public int objectsCollected;
     public int objectsNeeded;
     public GameObject door;
+    public MenuManager _menuManager; 
 
-
+    public int Score;
 
 
     // Start is called before the first frame update
@@ -41,8 +42,18 @@ public class DoorInteraction : MonoBehaviour
 
             // Deactivate the collectible so it cannot be collected again.
             Col.gameObject.SetActive(false);
+
+            Score = PlayerPrefs.GetInt("Snacks Obtained: ", 0);
+            Score++; 
             
+            PlayerPrefs.SetInt("Snacks Obtained: ", Score);
+            PlayerPrefs.Save();
+            
+            
+            Debug.Log("Snacks Obtained: " + Score.ToString());
+
         }
+        
         
     }
 
@@ -51,6 +62,8 @@ public class DoorInteraction : MonoBehaviour
         if (Col.gameObject.tag == "WinDoor")
         {
             FindObjectOfType<MenuManager>().WinGame();
+            
         }
     }
+    
 }
